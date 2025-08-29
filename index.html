@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>FlickFinder - Movie Search App</title>
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@600&family=Comic+Neue&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <h1>FlickFinder</h1>
+
+  <!-- Favorites Tab Toggle -->
+  <div id="favoritesToggle" onclick="toggleFavoritesTab()" title="Show Favorites" style="position: fixed; top: 20px; left: 20px; cursor: pointer; background: #ff6f91; color: white; padding: 10px 15px; border-radius: 25px; font-weight: 600; z-index: 1000; user-select: none;">
+    ★ Favorites
+  </div>
+
+  <!-- Favorites Popup Tab -->
+  <div id="favoritesTab" style="display:none; position: fixed; top: 60px; left: 20px; width: 320px; max-height: 75vh; overflow-y: auto; background: #fff0f5; border-radius: 20px; box-shadow: 0 15px 40px rgba(255,111,145,0.4); padding: 20px; z-index: 1000;">
+    <h3 style="color: #6b2e46; margin-top: 0;">Your Favorites</h3>
+    <div id="favoritesList">
+      <!-- Favorite movies will be inserted here -->
+    </div>
+  </div>
+
+  <!-- Search box containing input and button -->
+  <div id="searchBox">
+    <input type="text" id="searchInput" placeholder="Enter movie name" autocomplete="off" />
+    <button onclick="searchMovies()">Search</button>
+  </div>
+
+  <!-- Movie results container -->
+  <div id="movieResult"></div>
+
+  <script src="script.js"></script>
+</body>
+</html>
